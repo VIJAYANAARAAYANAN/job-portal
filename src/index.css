@@ -10,7 +10,9 @@
   -ms-overflow-style: none;  /* For Internet Explorer and Edge */
   scrollbar-width: none;  /* For Firefox */
 }
-
+:root{
+  background-color: #eaf1f5;
+}
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

@@ -1,19 +1,16 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-
 import "@mantine/core/styles.css";
-import { createTheme, Slider } from "@mantine/core";
+import { createTheme } from "@mantine/core";
 import { MantineProvider } from "@mantine/core";
+import Header from "./Header/Header";
+import Footer from "./LandingPage/Footer";
 
 import "./App.css";
 import Homepage from "./Pages/Homepage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import FindJobs from "./FindJobs/FindJobs";
+import FindJobs from "./Pages/FindJobs";
 //The routing check from the top to bottom matches with each routes so * will not be executed at the very first if it is at the end
 function App() {
-  const [count, setCount] = useState(0);
-
+  
   const theme = createTheme({
     colors: {
       "blue-ribbon": [
@@ -35,10 +32,12 @@ function App() {
     
     <MantineProvider theme={theme}>
       <BrowserRouter>
+      <Header/>
         <Routes>
           <Route path="/find-jobs" element={<FindJobs/>} />
           <Route path='*' element={<Homepage />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </MantineProvider>
   );
