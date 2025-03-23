@@ -30,16 +30,16 @@ const DreamJob = () => {
             label="Job Type"
             placeholder="Full Time"
           />
-          <div className="flex items-center justify-center h-full w-12 border-2 border-gray-300 hover:bg-white rounded-lg p-1 cursor-pointer">
+          <div className="flex items-center justify-center h-full w-12 border-2 border-gray-600 hover:bg-white rounded-lg p-1 cursor-pointer">
             <IconSearch className="h-[85%] w-[85%] " stroke={1.5} />
           </div>
         </div>
       </div>
 
       <div className="w=[55%] flex items-center justify-center">
-        <div className="w-[40rem]">
+        <div className="w-[40rem] relative">
           <img src={banimage} alt="Home-Image" />
-          <div className="w-fit">
+          <div className="absolute w-fit top-[63%] right-1 rounded-lg p-2 border-2 border-[#000000] backdrop-blur-md">
             <div className="text-center mb-1 text-sm text-black  ">10K + got job</div>
             <Avatar.Group>
               <Avatar src={avatar} />

@@ -9,7 +9,8 @@ import { MantineProvider } from "@mantine/core";
 import "./App.css";
 import Homepage from "./Pages/Homepage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
+import FindJobs from "./FindJobs/FindJobs";
+//The routing check from the top to bottom matches with each routes so * will not be executed at the very first if it is at the end
 function App() {
   const [count, setCount] = useState(0);
 
@@ -31,9 +32,11 @@ function App() {
     },
   });
   return (
+    
     <MantineProvider theme={theme}>
       <BrowserRouter>
         <Routes>
+          <Route path="/find-jobs" element={<FindJobs/>} />
           <Route path='*' element={<Homepage />} />
         </Routes>
       </BrowserRouter>
