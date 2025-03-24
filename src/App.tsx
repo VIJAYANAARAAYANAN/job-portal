@@ -27,6 +27,7 @@ function App() {
         "#142057",
       ],
     },
+    fontFamily:"Poppins , sans-serief"
   });
   return (
     
