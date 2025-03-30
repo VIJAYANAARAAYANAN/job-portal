@@ -1,6 +1,7 @@
 import "@mantine/core/styles.css";
-import { createTheme } from "@mantine/core";
+import { createTheme, Divider } from "@mantine/core";
 import { MantineProvider } from "@mantine/core";
+import '@mantine/tiptap/styles.css';
 import Header from "./Header/Header";
 import Footer from "./LandingPage/Footer";
 
@@ -8,6 +9,11 @@ import "./App.css";
 import Homepage from "./Pages/Homepage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import FindJobs from "./Pages/FindJobs";
+import FindTalents from "./Pages/FindTalents";
+import TalentProfile from "./Pages/TalentProfile";
+import PostJob from "./PostJobs/PostJob";
+import PostJobPage from "./Pages/PostJobPage";
+import JobDescriptionPage from "./Pages/JobDescriptionPage";
 //The routing check from the top to bottom matches with each routes so * will not be executed at the very first if it is at the end
 function App() {
   
@@ -27,15 +33,25 @@ function App() {
         "#142057",
       ],
     },
-    fontFamily:"Poppins , sans-serief"
+    fontFamily:"Poppins , sans-serief",
+    focusRing:'never',
+    primaryColor:'blue-ribbon',
+    primaryShade:7,
+
   });
   return (
     
     <MantineProvider theme={theme}>
       <BrowserRouter>
       <Header/>
+        <Divider size="xs" mx="md" />
+    
         <Routes>
           <Route path="/find-jobs" element={<FindJobs/>} />
+          <Route path="/find-talent" element={<FindTalents />} />
+          <Route path="/talent-profile" element={<TalentProfile />} />
+          <Route path="/jobs" element={<JobDescriptionPage />} />
+          <Route path="/post-job" element={<PostJobPage />}/>
           <Route path='*' element={<Homepage />} />
         </Routes>
         <Footer />

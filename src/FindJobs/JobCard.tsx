@@ -1,9 +1,10 @@
 import { IconBookmark } from "@tabler/icons-react";
 import { Text, Divider } from "@mantine/core";
 import { IconClockHour3 } from "@tabler/icons-react";
+import { Link } from "react-router-dom";
 const JobCard = (props:any) => {
   return (
-    <div className="bg-white p-4 w-80 font-[Poppins] flex flex-col gap-2 rounded-md">
+    <Link to="/jobs" className="bg-white p-4 w-80 font-[Poppins] flex flex-col gap-2 rounded-md">
       <div className="flex justify-between ">
         <div className="flex gap-2 items-center">
           <div className="p-1 bg-[#eaf1f5] rounded-md">
@@ -37,7 +38,7 @@ const JobCard = (props:any) => {
           <IconClockHour3 className="h-5 w-5" stroke={1.5} /> {props.postedDaysAgo} days ago.
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 export default JobCard;
