@@ -5,6 +5,7 @@ import Profile from "../TalentProfile/Profile";
 import { profile } from "../Data/TalentData";
 import RecommendTalent from "../TalentProfile/RecommendTalent";
 import JobsDesc from "../JobDescription/JobsDesc";
+import RecommendedJobs from "../JobDescription/RecommendedJobs";
 
 
 const JobDescriptionPage = () => {
@@ -16,8 +17,9 @@ const JobDescriptionPage = () => {
             Back
           </Button>
         </Link>
-        <div className="flex gap-5 px-3 ">
+        <div className="flex gap-5 px-3 justify-around">
           <JobsDesc />
+          <RecommendedJobs />
         </div>
     </div>
   );

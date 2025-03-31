@@ -1,6 +1,18 @@
 @import "tailwindcss";
 @tailwind utilities;
 
+@layer base{
+  ul, ol{
+    list-style: revert;
+    font-size: medium;
+  }
+  p{
+    font-size: medium;
+  }
+  li{
+    margin-left: 2em;
+  }
+}
 
 .no-scrollbar::-webkit-scrollbar {
   display: none; /* For Chrome, Safari, and newer Edge */
