@@ -1,8 +1,9 @@
-import { Button, Divider } from "@mantine/core";
-import { IconBriefcase, IconMapPin } from "@tabler/icons-react";
+import { ActionIcon, Button, Divider } from "@mantine/core";
+import { IconAdjustments, IconBriefcase, IconMapPin, IconPencil } from "@tabler/icons-react";
 import ExperienceCard from "./ExperienceCard";
 import Certifications from "./Certifications";
 import { profile } from "../Data/TalentData";
+import { useState } from "react";
 const Profile = (props: any) => {
   const skills = [
     "React",
@@ -20,8 +21,10 @@ const Profile = (props: any) => {
     "PostgreSQL",
   ];
 
+  const[edit , setedit] = useState([false,false,false,false,false]);
+
   return (
-    <div className="w-2/3 font-[Poppins] p-4 px-5">
+    <div className="w-4/5 font-[Poppins] mx-auto">
       <div className="relative">
         <img
           className="rounded-t-2xl h-50 w-full"
@@ -36,14 +39,12 @@ const Profile = (props: any) => {
       </div>
       <div className="px-3 mt-16 ">
         <div className="text-3xl font-semibold flex justify-between text-[#275DF5]">
-          {props.name}
-          <Button variant="light" color="#275DF5">
-            Message
-          </Button>
+          VijayaNaaraayanan B{" "}
+          
         </div>
         <div className="text-xl flex gap-1 items-center text-[#343434]">
           <IconBriefcase stroke={1.5} color="#275DF5" />
-          {props.role} &bull; {props.company}
+          Software EngineerIII &bull; Google
         </div>
         <div className="flex items-center gap-1 text-lg">
           <IconMapPin className="h-5 w-5 " color="#275DF5" stroke={1.5} />{" "}

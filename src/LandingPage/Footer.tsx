@@ -4,9 +4,13 @@ import {
   IconBrandInstagram,
   IconBrandX,
 } from "@tabler/icons-react";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
+
+  const location = useLocation();
   return (
+    location.pathname != '/signup' && location.pathname != '/login'?
     <div className="bg-[#1E1E1E] text-white font-[Poppins] py-10 mt-10">
       <div className="w-fill flex justify-between px-15">
         {/* Section 1 - JobHook Info */}
@@ -66,7 +70,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </div> : <></>
   );
 };
 

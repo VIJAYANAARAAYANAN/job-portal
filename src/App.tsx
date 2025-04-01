@@ -20,6 +20,8 @@ import CompanyPage from "./Pages/CompanyPage";
 import PostedJobPage from "./Pages/PostedJobPage";
 import JobHistory from "./JobHistory/JobHistory";
 import JobHistoryPage from "./Pages/JobHistoryPage";
+import SignUpPage from "./Pages/SignUpPage";
+import ProfilePage from "./Pages/ProfilePage";
 //The routing check from the top to bottom matches with each routes so * will not be executed at the very first if it is at the end
 function App() {
   const theme = createTheme({
@@ -58,7 +60,11 @@ function App() {
             <Route path="/post-job" element={<PostJobPage />} />
             <Route path="/posted-job" element={<PostedJobPage />} />
             <Route path="/job-history" element={<JobHistoryPage />} />
+            <Route path="/signup" element={<SignUpPage />} />
+            <Route path="/login" element={<SignUpPage />} />
             <Route path="/company" element={<CompanyPage />} />
+            <Route path="/profile" element={<ProfilePage />} />
+
             <Route path="*" element={<Homepage />} />
           </Routes>
           <Footer />
